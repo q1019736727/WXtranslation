@@ -1,4 +1,4 @@
-<!--index.wxml-->
+<!--logs.wxml-->
 <view class="container">
- hello world
+
 </view>

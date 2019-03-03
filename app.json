@@ -1,12 +1,28 @@
 {
   "pages": [
     "pages/index/index",
-    "pages/logs/logs"
+    "pages/history/history",
+    "pages/change/change"
   ],
   "window": {
     "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#a7f8d6",
-    "navigationBarTitleText": "WeChat",
+    "navigationBarBackgroundColor": "#99e0e4",
+    "navigationBarTitleText": "知否翻译",
     "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "翻译"
+      },
+      {
+        "pagePath": "pages/history/history",
+        "text": "历史"
+      }
+    ],
+    "position": "top",
+    "selectedColor": "#666",
+    "backgroundColor": "#fafafa"
   }
 }
