@@ -1,5 +1,6 @@
 //index.js
 //获取应用实例
+import $https from '../../utils/api.js'
 const app = getApp()
 
 Page({
@@ -8,7 +9,8 @@ Page({
     userInfo: {},
     hasUserInfo: false,
     name: '当那个当',
-    canIUse: wx.canIUse('button.open-type.getUserInfo')
+    canIUse: wx.canIUse('button.open-type.getUserInfo'),
+    queryResult:''
   },
   //事件处理函数
   bindViewTap: function() {
@@ -51,5 +53,18 @@ Page({
       userInfo: e.detail.userInfo,
       hasUserInfo: true
     })
+  },
+  queryWord(word){
+    if (word.detail.value){
+      wx.showLoading({
+        title: '努力翻译中...',
+      })
+      $https(word.detail.value).then((res) => {
+        console.log(res)
+        if (res.data) {
+          this.setData({ queryResult: res.data[0].dst})
+        }
+      })
+    }
   }
 })
