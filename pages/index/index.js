@@ -51,5 +51,16 @@ Page({
       userInfo: e.detail.userInfo,
       hasUserInfo: true
     })
+  },
+  //查询单词
+  queryWord(word){
+    wx.request({
+      url: `https://fanyi.baidu.com/transapi?from=auto&to=en&query=${word}`,
+      method: 'POST',
+      success:(res)=>{
+        console.log(res)
+      }
+    })
   }
+
 })

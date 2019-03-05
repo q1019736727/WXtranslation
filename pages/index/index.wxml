@@ -1,4 +1,7 @@
 <!--index.wxml-->
 <view class="container">
- hello world
+ <textarea placeholder='请输入文本'
+           bindconfirm='queryWord'
+           bindblur='queryWord'
+ ></textarea>
 </view>
