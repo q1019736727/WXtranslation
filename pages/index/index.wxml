@@ -1,7 +1,25 @@
 <!--index.wxml-->
 <view class="container">
- <textarea placeholder='请输入文本'
-           bindconfirm='queryWord'
-           bindblur='queryWord'
- ></textarea>
+  <view class='topNav'>
+    <view>
+      <label>自动检测</label>
+      <icon class='iconfont icon-dropdwon'></icon>
+    </view>
+    <view>⇌</view>
+    <view>
+      <label>到英文</label>
+      <icon class='iconfont icon-dropdwon'></icon>
+    </view>
+  </view>
+  <view class='textWrapper'>
+    <textarea placeholder='请输入要查询的词汇'
+            bindblur='queryWord'
+            bindconfirm='queryWord'
+    >
+    </textarea>
+  </view>
+
+  <view>
+    {{queryResult}}
+  </view>
 </view>
