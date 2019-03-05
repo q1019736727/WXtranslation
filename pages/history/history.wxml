@@ -1,4 +1,15 @@
 <!--logs.wxml-->
 <view class="container">
-
+  <label>翻译历史</label>
+  <view wx:for='{{historyList}}'
+        wx:key='index'
+        class='historyWrapper'>
+     <view class='labelWrapper'> 
+       <label>{{item.orign}}</label>
+       <label>{{item.query}}</label>
+     </view>
+     <icon bindtap='clearHistory'
+           class='iconfont icon-clear'
+           data-index='{{index}}'></icon>
+  </view>
 </view>

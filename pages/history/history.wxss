@@ -1,8 +1,33 @@
-.log-list {
-  display: flex;
-  flex-direction: column;
-  padding: 40rpx;
+.container{
+  font-size: 30rpx;
 }
-.log-item {
-  margin: 10rpx;
+.container > label{
+  line-height: 100rpx;
+  padding-left: 30rpx;
+  display: inline-block;
+  border-bottom: 1rpx solid #ddd;
+  width: calc(100% - 30rpx);
+}
+.historyWrapper{
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  border-bottom: 1rpx solid #ddd;
+  padding: 30rpx 0;
+}
+.historyWrapper .labelWrapper{
+  display: flex;
+  justify-content: start;
+  flex-direction: column;
+  align-items: start;
+  margin-left: 30rpx;
+}
+.historyWrapper .labelWrapper label:nth-child(1){
+  padding-bottom: 10rpx;
+}
+.historyWrapper .labelWrapper label:nth-child(2){
+  
+}
+.historyWrapper icon{
+  margin-right: 30rpx;
 }

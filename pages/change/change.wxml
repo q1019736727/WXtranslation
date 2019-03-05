@@ -1,3 +1,11 @@
 <!--pages/change/change.wxml-->
-<view>
+<view class='langWrapper'>
+  <view wx:for="{{langlist}}" 
+        bindtap='changeLang' 
+        class='lang' 
+        data-index='{{item.index}}'
+        wx:key='{{item.index}}'>
+    <label>{{item.chs}}</label>
+    <icon wx:if='{{index === currentIndex}}' class='iconfont icon-gou-'></icon>
+  </view>
 </view>

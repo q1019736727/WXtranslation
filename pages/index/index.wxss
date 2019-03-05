@@ -1,18 +1,56 @@
 /**index.wxss**/
 .container{
-  font-size: 15px;
-  
+  font-size: 30rpx;
+  position: relative;
+  height: 100vh;
+}
+.footer{
+  position: absolute;
+  height: 100rpx;
+  width: 100vw;
+  left: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  font-size: 26rpx;
 }
 .container .topNav{
-  height: 50px;
+  height: 100rpx;
   display: flex;
   justify-content: space-around;
   align-items: center;
 }
+.topNav .tolang{
+  margin-top: -20rpx;
+}
 .textWrapper{
-  height: 150px;
+  height: 300rpx;
   background: #f3f3f3;
+  position: relative;
 }
 .textWrapper textarea{
-  
+  top: 20rpx;
+  left: 60rpx;
+  height: 260rpx;
+  width: 630rpx;
+  position: absolute;
+}
+.textWrapper .icon-clear{
+  position: absolute;
+  right: 30rpx;
+  top: 16rpx;
+}
+.textWrapper .icon-clear.hidden{
+  display: none;
+}
+.lable{
+  margin-left: 30rpx;
+  height: 80rpx;
+  display: inline-block;
+  line-height: 80rpx;
+}
+.queryResult{
+  padding: 0 30rpx;
 }

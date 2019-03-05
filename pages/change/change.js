@@ -1,11 +1,33 @@
-// pages/change/change.js
+// pages/change/change.
+import config from '../../utils/common.js'
+import eventsHub from '../../utils/eventsHub.js'
+const app = getApp()
 Page({
-
   /**
    * 页面的初始数据
    */
   data: {
+    langlist: app.globalData.langList,
+    currentIndex: wx.getStorageSync(config.currentIndex) || 0
+  },
+  changeLang(e){
+    this.setData({
+      currentIndex: e.currentTarget.dataset.index
+    })
+    //本地储存选中语言
+    wx.setStorageSync(config.currentIndex, e.currentTarget.dataset.index)
+    app.globalData.currentSelectLanguage = app.globalData.langList[e.currentTarget.dataset.index].lang
+    eventsHub.emit('changeLang')
+    wx.navigateBack()
+  },
 
+  /**
+   * 生命周期函数--监听页面显示
+   */
+  onShow: function () {
+    this.setData({
+      currentIndex: wx.getStorageSync(config.currentIndex) || 0
+    })
   },
 
   /**
@@ -21,14 +43,6 @@ Page({
   onReady: function () {
 
   },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-
-  },
-
   /**
    * 生命周期函数--监听页面隐藏
    */

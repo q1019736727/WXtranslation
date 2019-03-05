@@ -1,1 +1,17 @@
 /* pages/change/change.wxss */
+.langWrapper{
+  font-size: 30rpx;
+}
+.langWrapper .lang{
+  line-height: 100rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1rpx solid #eee;
+}
+.lang label{
+  margin-left: 30rpx;
+}
+.lang icon{
+  margin-right: 30rpx;
+}

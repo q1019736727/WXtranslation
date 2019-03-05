@@ -3,23 +3,32 @@
   <view class='topNav'>
     <view>
       <label>自动检测</label>
-      <icon class='iconfont icon-dropdwon'></icon>
     </view>
     <view>⇌</view>
-    <view>
-      <label>到英文</label>
+    <view class='tolang' bindtap='toChange'>
+      <label>到{{currentName}}</label>
       <icon class='iconfont icon-dropdwon'></icon>
     </view>
   </view>
   <view class='textWrapper'>
-    <textarea placeholder='请输入要查询的词汇'
+    <textarea placeholder='请输入要查询的词汇或语句'
             bindblur='queryWord'
             bindconfirm='queryWord'
+            bindinput='inputword'
+            value='{{areaText}}'
+            id='textarea'
     >
     </textarea>
+    <icon bindtap='clearText' class='iconfont icon-clear {{hiddenclear ? "hidden":""}}'></icon>
   </view>
-
-  <view>
+  <label class='lable'>译文</label>
+  <view class='queryResult'>
     {{queryResult}}
+  </view>
+  <view class='footer'>
+  <icon class='iconfont icon-ic_g_translate_px'></icon>
+  <view>
+    © by qiuyong
+  </view>
   </view>
 </view>
