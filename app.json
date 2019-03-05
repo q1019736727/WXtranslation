@@ -7,7 +7,7 @@
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#99e0e4",
-    "navigationBarTitleText": "知否翻译",
+    "navigationBarTitleText": "小智翻译",
     "navigationBarTextStyle": "black"
   },
   "tabBar": {
