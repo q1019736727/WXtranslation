@@ -24,5 +24,6 @@
     "position": "top",
     "selectedColor": "#666",
     "backgroundColor": "#fafafa"
-  }
+  },
+  "sitemapLocation": "sitemap.json"
 }
