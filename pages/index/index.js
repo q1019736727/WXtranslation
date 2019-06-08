@@ -98,12 +98,13 @@ Page({
       }
       console.log('---', this.areaText)
     }
-    // wx.showLoading({
-    //   title: '努力翻译中...',
-    // })
+    wx.showLoading({
+      title: '努力翻译中...',
+    })
     $https(queryWord,app.globalData.currentSelectLanguage).then((res) => {
-      if (res.data) {
-        this.setData({ queryResult: res.data[0].dst})
+      wx.hideLoading()
+      if (res.trans_result) {
+        this.setData({ queryResult: res.trans_result[0].dst})
         let array = wx.getStorageSync(config.history) || []
         array.push({
           orign: this.data.areaText,
